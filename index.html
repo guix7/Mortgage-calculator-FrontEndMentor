@@ -21,57 +21,64 @@
 
     
     <div class="calculadora">
-        <header class="cabecalho">
-            <h1 class="titulo">Mortgage Calculator</h1>
-            <button class="limpar">Clear All</button>
-        </header>
-
+        
         <form action="" class="formulario">
+            <header class="cabecalho">
+                <h1 class="titulo">Mortgage Calculator</h1>
+                <button type="submit" class="limpar">Clear All</button>
+            </header>
             <p class="subtitulo">Mortgage Amount</p>
             <div class="part-1">
-               <div class="span-1">
-                <i class="fas fa-pound-sign"></i>
+               <div class="span-1 spans">
+               <p class="simbolos">£</p>
                </div>
                 <input type="number" class="campo">
             </div>
+
+            <span class="erro">This field is required</span>
 
             <div class="part-2">
                 <div>
                     <p class="subtitulo">Mortgage Term</p>
                     <div class="span-2">
 
-                        <input type="number">
-                        <div class="span-3">
-                            years
+                        <input type="number" class="campo-2">
+                        <div class="span-3 spans">
+                          <p class="simbolos">years</p>
                         </div>
                     </div>
                 </div>
                 <div id="p2">
-                    <p class="subtitulo">interest rate</p>
+                    <p class="subtitulo">Interest Rate</p>
                     <div class="span-2">
 
-                        <input type="number">
-                        <div class="span-4">
-                            <i class="fas fa-percent"></i>
+                        <input type="number" class="campo-2">
+                        <div class="span-4 spans">
+                            <p class="simbolos">%</p>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <span class="erro">This field is required</span>
+            <span class="erro espaco">This field is required</span>
 
             <div class="pt-5">
 
                 <p class="subtitulo">Mortgage Type</p>
                 <div class="labels">
 
-                    <input type="radio" id="repayment" name="check" >
-                    <label for="repayment" >Repayment</label>
+                    <input type="radio" id="repayment" name="check" class="check" >
+                    <label for="repayment" class="legenda">Repayment</label>
                 </div>
                 <div class="labels">
 
-                    <input type="radio" id="interest" name="check">
-                    <label for="interest">Interest Only</label>
+                    <input type="radio" id="interest" name="check" class="check">
+                    <label for="interest" class="legenda">Interest Only</label>
                 </div>
+                <span class="erro erro-2">This field is required</span>
             </div>
+            
 
             <button class="calcular" type="submit">Calculate Repayments</button>
 
@@ -79,10 +86,22 @@
 
         </form>
     </div>
-    <div class="Painel-principal">
+    <div class="painel-principal invisivel">
         <img src="src/img/illustration-empty.svg" alt="imagem de fundo">
-        <h1>Resusts Show Here</h1>
-        <p>Complete the form and click "Calculate Repayments" to see what your monthly repayments would be</p>
+        <h1>Results show here</h1>
+        <p>Complete the form and click "calculate repayments" to see what your monthly repayments would be.</p>
+    </div>
+
+    <div class="painel-display">
+        <h1>Your results</h1>
+        <p>Youre results are shown below based on the information you provide. To adjust the resultd, edit the form and click "claculate repayments" again.</p>
+
+        <div class="caixa">
+            <h2>Your monthly repayments</h2>
+            <div class="valor"></div>
+            <p>Total you'll repay over the term</p>
+            <div class="sub-valor"></div>
+        </div>
     </div>
 </div>
 

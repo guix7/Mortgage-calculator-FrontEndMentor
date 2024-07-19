@@ -11,18 +11,14 @@ body{
 .container{
     background-color: var(--white);
     width: 50vw;
-    height: 60vh;
     margin: 150px auto;
-    border-radius: 25px;
-    padding: 35px;
+    border-radius: 25px 0px 0px 25px;
     display: flex;
 }
 
-.calculadora, .painel-principal{
-    width: 50%;
-}
 .calculadora{
-    
+    padding: 35px;
+    width: 50%;
 }
 .cabecalho{
     display: flex;
@@ -64,22 +60,34 @@ body{
 
 .campo{
     width: 100%;
-    padding: 15px 15px 15px 70px;
     border: 1px solid hsl(203, 41%, 72%);
     border-radius: 5px;
     outline: none;
-    font-weight: bold;
-    
+}
+
+.campo:hover{
+    cursor: pointer
+}
+
+.campo, .campo-2{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: var(--slate900);
+    padding: 20px 20px 20px 70px;
+}
+
+.campo-verde{
+    border-color: #d8db2f
 }
 
 .span-1{
     width: 65px;
-    height: 45px;
+    height: 57px;
     position: absolute;
     left: 1px;
     top: 1px;
     background-color: var(--slate);
-    border-radius: 5px 0 0px 5px;
+    border-radius: 3px 0 0px 3px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -91,13 +99,14 @@ body{
 }
 
 
+
 input[type=number]::-webkit-inner-spin-button { 
     -webkit-appearance: none;
     
 }
 
 .part-2{
-    margin-top: 25px ;
+    
     display: flex;
     justify-content: space-between;
 }
@@ -122,10 +131,10 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .span-3{
-    width: 55px;
-    height: 45px;
+    width: 65px;
+    height: 47px;;
     position: absolute;
-    right: 12px;
+    right: 11px;
     top: 1px;
     background-color: var(--slate);
     display: flex;
@@ -138,8 +147,8 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .span-4{
-    width: 55px;
-    height: 45px;
+    width: 65px;
+    height: 47px;;
     position: absolute;
     right: 1px;
     top: 1px;
@@ -162,9 +171,6 @@ input[type=number]::-webkit-inner-spin-button {
     width: 100%;
 }
 
-.pt-5 {
-    margin-top:30px
-}
 
 .labels{
     border: 1px solid hsl(200, 24%, 40%);
@@ -184,12 +190,17 @@ input[type="radio"]{
     accent-color: green;
 }
 
+.labels:hover{
+    cursor: pointer;
+}
+
 .verde{
-    border: 1px solid green;
-    background-color: #d8db2f69;
+    border: 1px solid  #d8db2f;
+    background-color: #d8db2f42;
     padding: 15px;
     margin: 8px 0;
     border-radius: 5px;
+    
 }
 
 .calcular{
@@ -198,8 +209,8 @@ input[type="radio"]{
     color: var(--slate900);
     font-weight: 700;
     font-size: 1.8rem;
-    padding: 20px 10px;
-    margin: 8px 0;
+    padding: 12px 10px;
+    margin-top: 10px;
     border-radius: 40px;
     width: 70%
 
@@ -218,4 +229,112 @@ input[type="radio"]{
 
 .calcular:hover{
     cursor: pointer;
+}
+
+.painel-principal{
+    background-color: var(--slate900);
+    border-radius: 0px 0px 0px 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    
+    
+}
+.invisivel{
+    display: none;
+}
+.painel-principal img{
+    width: 50%;
+    margin: 0 auto;
+    transform: translateY(-40px);
+}
+
+.painel-principal h1, .painel-principal p{
+    color: var(--white);
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.painel-principal h1{
+    font-size: 2.5rem;
+    font-weight: 500;
+    padding-bottom: 30px;
+    
+}
+
+.painel-principal p{
+    font-size: 1.6rem;
+    line-height: 30px;
+    color: var(--slate300);
+    font-weight: 500;
+}
+
+.erro{
+    color: var(--red);
+    font-size: 1.5rem;
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 5px;
+    visibility: hidden;
+   
+}
+
+.espaco{
+    display: inline-block;
+    padding-left: 75px;
+    
+}
+
+.simbolos{
+    font-size: 2.0rem;
+    font-weight: 600;
+    color: var(--slate700);
+}
+
+.painel-display{
+    background-color: var(--slate800);
+    border-radius: 0px 0px 0px 110px;
+    width: 50%;
+    padding: 30px;
+    color: var(--white);
+    
+}
+
+.painel-display h1{
+    margin-bottom: 30px;
+
+}
+
+.painel-display p{
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    color: var(--slate300);
+    font-weight: 400;
+}
+
+.caixa{
+    width: 98%;
+    background-color: var(--slate900);
+    margin: 35px 0px;
+    border-radius: 15px;
+    padding: 30px;
+    border-top: 4px solid #D8DB2F;
+}
+
+.valor{
+    font-size: 5rem;
+    font-weight: 500;
+    margin: 15px 0 30px 0;
+    border-bottom: 1px solid hsl(202, 53%, 25%) ;
+    padding-bottom: 30px;
+    color: var(--lime);
+}
+
+.sub-valor{
+    color: var(--white);
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin: 8px 0;
 }
